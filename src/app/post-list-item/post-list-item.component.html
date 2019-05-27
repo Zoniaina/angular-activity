@@ -5,8 +5,7 @@
     <div class="col-md-9"><h4>{{title}}</h4></div><div class="col-md-3">{{date}}</div>
   </div>
   <p>{{content}}</p>
-  <div class="">
     <button class="btn btn-success" (click)="addLove()">Love It!</button>
     <button class="btn btn-danger ml-3" (click)="addDontLove()">Don't love It!</button>
-  </div>
+    <span class="col-sm-pull-right" (click)="onDelete()"><button class="btn btn-dark">Delete</button></span>
 </li>

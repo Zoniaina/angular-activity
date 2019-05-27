@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PostService} from "../services/post.service";
+import {Post} from "../model/post.model";
 
 @Component({
   selector: 'app-post-list-item',
@@ -26,4 +27,7 @@ export class PostListItemComponent implements OnInit {
       this.postService.dontLoveIt(this.index);
   }
 
+  onDelete(post: Post){
+    this.postService.removePost(post);
+  }
 }
