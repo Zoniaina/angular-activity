@@ -1,11 +1,17 @@
 <li [ngClass]="{'list-group-item':true,
                'list-group-item-success': loveIts > 0,
-               'list-group-item-danger': loveIts < 0}">
+               'list-group-item-danger': loveIts < 0}"
+    style="margin-bottom: 0.2em">
   <div class="row">
     <div class="col-md-9"><h4>{{title}}</h4></div><div class="col-md-3">{{date}}</div>
   </div>
   <p>{{content}}</p>
-    <button class="btn btn-success" (click)="addLove()">Love It!</button>
-    <button class="btn btn-danger ml-3" (click)="addDontLove()">Don't love It!</button>
-    <span class="col-sm-pull-right" (click)="onDelete()"><button class="btn btn-dark">Delete</button></span>
+  <div class="row">
+    <div class="col-xs-9">
+      <button class="btn btn-success" (click)="addLove()">Love It! ({{loveIts}})</button>
+      <button class="btn btn-danger" style="margin-left: 2px" (click)="addDontLove()">Don't love It!</button>
+    </div>
+    <div class="col-xs-3"><button class="btn btn-danger" (click)="onDelete()">Delete post</button></div>
+  </div>
+
 </li>
